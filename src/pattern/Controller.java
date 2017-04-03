@@ -15,14 +15,17 @@ public class Controller implements Observer{
 
 
     @FXML public void initialize(){
+        refreshAnzeige();
     }
 
     @FXML public void einfuegenPressed(){
         model.add(tfEintrag.getText());
+        refreshAnzeige();
     }
 
     @FXML public void resetPressed(){
         model.reset();
+        refreshAnzeige();
     }
 
     private void refreshAnzeige(){
@@ -31,7 +34,6 @@ public class Controller implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        refreshAnzeige();
     }
 
 

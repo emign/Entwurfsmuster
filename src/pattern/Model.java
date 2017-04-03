@@ -8,11 +8,10 @@ import java.util.Observable;
  */
 public class Model extends Observable{
 
-    private Controller controller;
     private static Model instance;
-
     private static String[] fruchtListe;
     private  static String[] originalFruchtListe;
+    private Controller controller;
 
     private Model(){
         //System.err.println("Singleton! Keine Objekte hiervon erzeugen. Verwenden Sie getInstance()");
@@ -56,8 +55,6 @@ public class Model extends Observable{
     }
 
     private void changed(){
-        setChanged();
-        notifyObservers();
     }
 
 
