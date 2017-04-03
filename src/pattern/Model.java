@@ -50,8 +50,6 @@ public class Model extends Observable{
     }
 
     public void addController(Controller controller){
-        this.controller = controller;
-        addObserver(controller);
     }
 
     private void changed(){
