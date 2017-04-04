@@ -11,9 +11,11 @@ Ein großer Vorteil, auf den du bei deinen Recherchen zu MVC sicher gestoßen bi
 Austauschbarkeit der einzelnen Bestandteile (insbesondere Model und View). So kann auf Änderungen schnell reagiert werden.
 Dir ist sicher aufgefallen, dass die Implementierung des Models über ein Array recht aufwändig ist (wenn nicht, suche den Grund).
 Ändere die Implementierung des Models so ab, dass es eine Liste und kein Array mehr verwendet.
+Hinweis: Die in diesem Beispiel verwendete MVC-Implementierung besitzt keine direkten Verknüpfungen zwischen dem Model und dem
+View. Es läuft alles über den Controller.
 
 # Aufgabe 3
-Bis jetzt war es notwendig, wenn Änderungen am Model erfolgten, den Controller anzuweisen, den View zu aktualisieren.
+Bis jetzt war es notwendig, wenn Änderungen am Model erfolgten, den Controller manuell anzuweisen, den View zu aktualisieren.
 Diese Taktik ist natürlich fehleranfällig (der Zustand des Models könnte inkonsistent zur Anzeige sein) und umständlich.
 Unter anderem für solche Fälle wurde das Observer/Observeable-Pattern erfunden. Informiere dich darüber im Internet
 und implementiere den Controller als Observer und das Model als Observeable, so das Änderungen am Model automatisch

@@ -6,7 +6,7 @@ import java.util.Observable;
 /**
  * Created by nicolaiemig on 03.04.17.
  */
-public class Model extends Observable{
+class Model extends Observable {
 
     private static Model instance;
     private static String[] fruchtListe;
@@ -17,7 +17,7 @@ public class Model extends Observable{
         //System.err.println("Singleton! Keine Objekte hiervon erzeugen. Verwenden Sie getInstance()");
     }
 
-    public static Model getInstance(){
+    static Model getInstance() {
         if (Model.instance == null){
             Model.instance = new Model();
         }
@@ -26,7 +26,7 @@ public class Model extends Observable{
         return Model.instance;
     }
 
-    public String getValues(){
+    String getValues() {
         String returnString = "";
         StringBuilder sb = new StringBuilder();
         for (String frucht : fruchtListe){
@@ -36,7 +36,7 @@ public class Model extends Observable{
         return sb.toString();
     }
 
-    public void add(String value){
+    void add(String value) {
         // Neues Array erzeugen (muss ja um 1 größer sein)
         String[] neueFruchtListe = Arrays.copyOf(fruchtListe, fruchtListe.length+1);
         neueFruchtListe[neueFruchtListe.length-1] = value;
@@ -44,12 +44,12 @@ public class Model extends Observable{
         changed();
     }
 
-    public void reset(){
+    void reset() {
         fruchtListe = Arrays.copyOf(originalFruchtListe,originalFruchtListe.length);
         changed();
     }
 
-    public void addController(Controller controller){
+    void addController(Controller controller) {
     }
 
     private void changed(){

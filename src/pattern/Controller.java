@@ -9,6 +9,8 @@ import java.util.Observer;
 
 public class Controller implements Observer{
 
+    // Alle Attribute, welche das Keyword @FXML tragen sind
+    // direkte Verknüpfungen zu den Elementen des View
     @FXML TextField tfEintrag;
     @FXML TextArea ta0;
     Model model =  Model.getInstance();
@@ -19,7 +21,8 @@ public class Controller implements Observer{
     }
 
     @FXML public void einfuegenPressed(){
-        model.add(tfEintrag.getText());
+        if (!tfEintrag.getText().isEmpty())
+            model.add(tfEintrag.getText());
         refreshAnzeige();
     }
 
