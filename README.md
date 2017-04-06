@@ -18,6 +18,6 @@ View. Es läuft alles über den Controller.
 Bis jetzt war es notwendig, wenn Änderungen am Model erfolgten, den Controller manuell anzuweisen, den View zu aktualisieren.
 Diese Taktik ist natürlich fehleranfällig (der Zustand des Models könnte inkonsistent zur Anzeige sein) und umständlich.
 Unter anderem für solche Fälle wurde das Observer/Observeable-Pattern erfunden. Informiere dich darüber im Internet
-und implementiere den Controller als Observer und das Model als Observeable, so das Änderungen am Model automatisch
+und implementiere den Controller als Observer und das Model als Observable, so das Änderungen am Model automatisch
 vom Controller an den View weiter gereicht werden. Wenn du den Code ansiehst, wirst du erkennen, dass für diese Aufgabe
 bereits einige Vorbereitungen getroffen wurden.

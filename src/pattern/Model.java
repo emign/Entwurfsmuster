@@ -5,12 +5,13 @@ import java.util.Observable;
 
 /**
  * Created by nicolaiemig on 03.04.17.
+ * Sonst ist nichts zu sagen
  */
 class Model extends Observable {
 
     private static Model instance;
     private static String[] fruchtListe;
-    private  static String[] originalFruchtListe;
+    private static String[] originalFruchtListe;
     private Controller controller;
 
     private Model(){
